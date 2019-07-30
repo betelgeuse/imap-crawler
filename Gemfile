@@ -1,6 +1,7 @@
+ruby '2.6.3'
+
 source :rubygems
 
 gem 'mail'
-gem 'jruby-openssl'
 gem 'json'
 gem 'thor'
