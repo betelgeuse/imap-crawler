@@ -30,7 +30,7 @@ class App < Thor
     login = ask 'login:'
     password = ask 'password:'
 
-    imap = Net::IMAP.new(imap_server, :ssl => {:verify_mode => OpenSSL::SSL::VERIFY_NONE})
+    imap = Net::IMAP.new(imap_server, ssl: true)
     imap.login(login, password)
     imap.list('', '*').each do |mailbox|
       imap.examine mailbox.name
